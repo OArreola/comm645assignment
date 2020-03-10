@@ -27,14 +27,14 @@ header {
     height: auto;
   }
   h1 {
-    @include headerHeading($red, 100, 4em, 0);
+    @include headerHeading($red, 100, 4em);
   }
   h2 {
-    @include headerHeading($white, 900, 2.5em, 0);
+    @include headerHeading($white, 900, 2.5em);
     margin-bottom: 70px;
   }
   h3 {
-    @include headerHeading($darkgrey, 400, 2em, 0);
+    @include headerHeading($darkgrey, 400, 2em);
     margin-bottom: 50px;
   }
 }
@@ -82,11 +82,11 @@ header {
 
 /* FOOTER */
 .greybar {
-  @include footerBox(100%, 90px, $color-greybar, 30px);
+  @include footerBox(90px, $color-greybar, 30px);
   clear: both;
 }
 footer {
-  @include footerBox(100%, 120px, $color-bg-footer, 50px);
+  @include footerBox(120px, $color-bg-footer, 50px);
   text-align: center;
   color: $white;
 }

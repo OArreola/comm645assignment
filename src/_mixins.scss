@@ -20,14 +20,14 @@
   background: $background;
 }
 
-@mixin footerBox($width, $height, $background, $padding-top) {
+@mixin footerBox($height, $background, $padding-top, $width: 100%) {
   width: $width;
   height: $height;
   background: $background;
   padding-top: $padding-top;
 }
 
-@mixin headerHeading($color, $weight, $size, $height) {
+@mixin headerHeading($color, $weight, $size, $height: 0) {
   color: $color;
   font-weight: $weight;
   font-size: $size;

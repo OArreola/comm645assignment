@@ -1,5 +1,6 @@
 /* MEDIA QUERIES */
 @include break($media-large) {
+  $columns: $columns-media-large;
   main {
     width: 768px;
   }
@@ -33,12 +34,13 @@
   }
   #content #products,
   #content #testimonials {
-    width: 46%;
-    margin: 0 2%;
+    width: ($full_size / $columns) - ($gutter * 2);
+    margin: 0 $gutter;
   }
 }
 
 @include break($media-medium) {
+  $columns: $columns-media-medium;
   main {
     width: 460px;
   }
@@ -66,8 +68,8 @@
   }
   #content #products,
   #content #testimonials {
-    width: 96%;
-    margin: 0 2%;
+    width: ($full_size / $columns) - ($gutter * 2);
+    margin: 0 $gutter;
     float: none;
   }
 }
