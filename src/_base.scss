@@ -1,0 +1,118 @@
+body {
+  font-family: $font-body;
+  font-size: 1em;
+  line-height: 2em;
+  background: $image-background $color-body repeat-x;
+  margin: 0;
+}
+
+main {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+figure {
+  @include logoImage(400px, 190px, left, 50px);
+}
+
+/* HEADER */
+header {
+  width: inherit;
+  clear: both;
+  text-align: center;
+  padding-top: 40px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  h1 {
+    @include headerHeading($red, 100, 4em, 0);
+  }
+  h2 {
+    @include headerHeading($white, 900, 2.5em, 0);
+    margin-bottom: 70px;
+  }
+  h3 {
+    @include headerHeading($darkgrey, 400, 2em, 0);
+    margin-bottom: 50px;
+  }
+}
+
+/* CONTENT */
+#headline {
+  @include headlineBox(100%, 130px, $red);
+  text-align: center;
+  margin: 0 auto;
+  h1 {
+    color: $white;
+    font-size: 2.5em;
+    font-weight: 100;
+    padding-top: 50px;
+  }
+}
+
+#content {
+  width: 940px;
+  margin: 20px auto;
+  h3 {
+    color: $darkgrey;
+    font-size: 2em;
+    font-weight: 400;
+  }
+  #products {
+    width: 460px;
+    float: left;
+    img {
+      float: left;
+      margin-right: 20px;
+    }
+    article {
+      margin-bottom: 40px;
+    }
+    h4 {
+      line-height: 1em;
+    }
+  }
+  #testimonials {
+    width: 460px;
+    float: right;
+  }
+}
+
+/* FOOTER */
+.greybar {
+  @include footerBox(100%, 90px, $color-greybar, 30px);
+  clear: both;
+}
+footer {
+  @include footerBox(100%, 120px, $color-bg-footer, 50px);
+  text-align: center;
+  color: $white;
+}
+
+$social-pos: (
+  one: 0,
+  two: -38px,
+  three: -76px,
+  four: -114px
+);
+.social-media {
+  margin: 0 auto;
+  width: 165px;
+  div {
+    float: left;
+    margin-right: 5px;
+  }
+  a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999px;
+  }
+  @each $name, $value in $social-pos {
+    div.#{$name} {
+      background: $image-social-media $value 0;
+    }
+  }
+}

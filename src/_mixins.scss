@@ -1,0 +1,41 @@
+@mixin logoImage($width, $height, $float, $size) {
+  width: $width;
+  height: $height;
+  background: $image-logo no-repeat 0 $size;
+  float: $float;
+  display: block;
+  margin: 0;
+}
+
+@mixin navBox($width, $height, $float) {
+  width: $width;
+  height: $height;
+  float: $float;
+  text-align: right;
+}
+
+@mixin headlineBox($width, $height, $background) {
+  width: $width;
+  height: $height;
+  background: $background;
+}
+
+@mixin footerBox($width, $height, $background, $padding-top) {
+  width: $width;
+  height: $height;
+  background: $background;
+  padding-top: $padding-top;
+}
+
+@mixin headerHeading($color, $weight, $size, $height) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin break($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
